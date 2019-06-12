@@ -2,6 +2,17 @@
 It is an AI assistant which will automate your task
 
 
+**DEMO VIDEO**
+
+
+1:https://www.youtube.com/watch?v=kS_k5pweA3E&t=2s 
+
+
+2:https://www.youtube.com/watch?v=nuMGgv2DAFU
+
+
+3:https://www.youtube.com/watch?v=HJQ8RWY5OMg&t=1s
+
 
 Prerequsites:
 
