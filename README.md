@@ -4,14 +4,16 @@ It is an AI assistant which will automate your task
 
 **DEMO VIDEO**
 
+# 1
 
-1:https://www.youtube.com/watch?v=kS_k5pweA3E&t=2s 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LPczI5RdfWM/0.jpg)](https://www.youtube.com/watch?v=LPczI5RdfWM)
 
-
-2:https://www.youtube.com/watch?v=nuMGgv2DAFU
-
-
-3:https://www.youtube.com/watch?v=HJQ8RWY5OMg&t=1s
+# 2
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kS_k5pweA3E/0.jpg)](https://www.youtube.com/watch?v=kS_k5pweA3E)
+# 3
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nuMGgv2DAFU/0.jpg)](https://www.youtube.com/watch?v=nuMGgv2DAFU)
+# 4
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/HJQ8RWY5OMg/0.jpg)](https://www.youtube.com/watch?v=HJQ8RWY5OMg)
 
 
 Prerequsites:
@@ -41,11 +43,6 @@ pip install speech recongnition
 ```python
 pip install wikipedia
 ```
-*smtplib*
-```python
-pip install smtplib
-```
-*webbrowser*
-```python
-pip install webbrowser
-```
+
+
+
