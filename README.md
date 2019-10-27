@@ -1,5 +1,5 @@
 # JARVIS-AI
-It is an AI assistant which will automate your task
+It is an AI assistant which will automate your task.
 
 
 **DEMO VIDEO**
