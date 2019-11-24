@@ -22,9 +22,9 @@ Prerequsites:
 
 
 
-*python3.6.2*
+*[Python3.6.2](https://www.python.org/downloads/release/python-362/)*
 
-https://www.python.org/downloads/release/python-362/
+
 
 *pyttsx3*
 ```python
