@@ -44,7 +44,7 @@ pip install pyaudio
 ```
 *speech recongnition*
 ```python
-pip install speech recongnition
+pip install SpeechRecognition
 ```
 *wikipedia*
 ```python
