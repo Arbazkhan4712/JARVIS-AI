@@ -82,14 +82,14 @@ def sendEmail(to, content):
     server.close()
 
 def lighton():
-    driver = webdriver.Chrome('C:/Users/Username/Downloads/chromedriver.exe')add the location of the chrome Drivers
-    driver.get("https://Add here.000webhostapp.com/main.html")Add the webhost name
+    driver = webdriver.Chrome('C:/Users/Username/Downloads/chromedriver.exe')#add the location of the chrome Drivers
+    driver.get("https://Add here.000webhostapp.com/main.html")#Add the webhost name
     elem1 = driver.find_element_by_id("S1off")
     elem1.click()
 
 def lightoff():
     driver = webdriver.Chrome('C:/Users/HACKER47/Downloads/chromedriver.exe')
-    driver.get("https://Add here.000webhostapp.com/main.html")Add the webhost name
+    driver.get("https://Add here.000webhostapp.com/main.html")#Add the webhost name
     elem1 = driver.find_element_by_id("S1on")
     elem1.click()
             
@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
         elif 'search in chrome' in query:
             speak("what should i search?")
-            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'Add the Location of the chrome browser
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'#Add the Location of the chrome browser
 
             r = sr.Recognizer()
 
