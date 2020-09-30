@@ -193,8 +193,22 @@ if __name__ == "__main__":
             speak("OK,sir turning off the Lights")
             lightoff()
             speak("Lights are off")
-
-
+        elif 'my' in query and ('location' in query):
+                try:
+                    response = requests.get('https://ipinfo.io/')
+                    locInfo = response.json()
+                    # print(data)
+                    print(30*"-")
+                    print(locInfo['city'])
+                    print(locInfo['region'])
+                    if locInfo['country'] == 'IN':
+                        locInfo['country'] = 'India'
+                    print(locInfo['country'])
+                    print(locInfo['postal'])
+                    speak(f"Sir, you are currently in {locInfo['city']} in {locInfo['region']}. Postal code is {locInfo['postal']}")
+                    print(30*"-")
+                except Exception as e:
+                    print("Sorry, sir. I am having issues gathering your location")
 
         elif 'go offline' in query:
             speak("ok sir shutting down the system")
