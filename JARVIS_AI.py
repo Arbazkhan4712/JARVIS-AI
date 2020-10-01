@@ -194,7 +194,10 @@ if __name__ == "__main__":
             lightoff()
             speak("Lights are off")
 
-
+        elif "search for me jarvis" in query:
+            speak("what sir")
+            a = takeCommand()
+            wb.open(f"https://www.google.com/search?q={a}")
 
         elif 'go offline' in query:
             speak("ok sir shutting down the system")
