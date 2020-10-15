@@ -80,6 +80,24 @@ def sendEmail(to, content):
     server.login('Senderemail@gmail.com', 'Password')
     server.sendmail('Senderemail@gmail.com', to, content)
     server.close()
+    
+def cpu():
+    usage=str(psutil.cpu_percent())
+    speak("CPU is at"+usage)
+
+    battery = psutil.sensors_battery()
+    speak("battery is at")
+    speak(battery.percent)
+
+def joke():
+    speak(pyjokes.get_jokes())
+
+def screenshot():
+    img=pyautogui.screenshot()
+    img.save('c:/Users/91989/Desktop/some files/screenshot.png')    
+    
+    
+    
 
 def lighton():
     driver = webdriver.Chrome('C:/Users/Username/Downloads/chromedriver.exe')add the location of the chrome Drivers
@@ -193,6 +211,16 @@ if __name__ == "__main__":
             speak("OK,sir turning off the Lights")
             lightoff()
             speak("Lights are off")
+            
+            
+        elif 'cpu' in query:
+            cpu()
+
+        elif ' joke' in query:
+            joke()
+            
+        elif 'screenshot' in query:
+            screenshot()
 
 
 
