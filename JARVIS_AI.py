@@ -199,5 +199,106 @@ if __name__ == "__main__":
         elif 'go offline' in query:
             speak("ok sir shutting down the system")
             quit()
+            
+        		elif 'how are you' in query: 
+			speak("I am fine, Thank you") 
+			speak("How are you, Sir") 
 
+		elif 'fine' in query or "good" in query: 
+			speak("It's good to know that your fine") 
+
+		elif "change my name to" in query: 
+			query = query.replace("change my name to", "") 
+			assname = query 
+
+		elif "change name" in query: 
+			speak("What would you like to call me, Sir ") 
+			assname = takeCommand() 
+			speak("Thanks for naming me") 
+
+		elif "what's your name" in query or "What is your name" in query: 
+			speak("My friends call me") 
+			speak(assname) 
+			print("My friends call me", assname) 
+
+		elif 'exit' in query: 
+			speak("Thanks for giving me your time") 
+			exit() 
+
+		elif "who made you" in query or "who created you" in query: 
+			speak("I have been created by Ayush.") 
+			
+		elif 'joke' in query: 
+			speak(pyjokes.get_joke()) 
+			
+		elif "calculate" in query: 
+			
+			app_id = "Wolframalpha api id"
+			client = wolframalpha.Client(app_id) 
+			indx = query.lower().split().index('calculate') 
+			query = query.split()[indx + 1:] 
+			res = client.query(' '.join(query)) 
+			answer = next(res.results).text 
+			print("The answer is " + answer) 
+			speak("The answer is " + answer) 
+
+		elif 'search' in query or 'play' in query: 
+			
+			query = query.replace("search", "") 
+			query = query.replace("play", "")		 
+			webbrowser.open(query) 
+            
+        elif 'news' in query: 
+			
+			try: 
+				jsonObj = urlopen('''https://newsapi.org / v1 / articles?source = the-times-of-india&sortBy = top&apiKey =\\times of India Api key\\''') 
+				data = json.load(jsonObj) 
+				i = 1
+				
+				speak('here are some top news from the times of india') 
+				print('''=============== TIMES OF INDIA ============'''+ '\n') 
+				
+				for item in data['articles']: 
+					
+					print(str(i) + '. ' + item['title'] + '\n') 
+					print(item['description'] + '\n') 
+					speak(str(i) + '. ' + item['title'] + '\n') 
+					i += 1
+			except Exception as e: 
+				
+				print(str(e)) 
+        elif "send message " in query: 
+				# You need to create an account on Twilio to use this service 
+				account_sid = 'Account Sid key'
+				auth_token = 'Auth token'
+				client = Client(account_sid, auth_token) 
+
+				message = client.messages \ 
+								.create( 
+									body = takeCommand(), 
+									from_='Sender No', 
+									to ='Receiver No'
+								) 
+
+				print(message.sid) 
+            
+        elif "write a note" in query: 
+			speak("What should i write, sir") 
+			note = takeCommand() 
+			file = open('jarvis.txt', 'w') 
+			speak("Sir, Should i include date and time") 
+			snfm = takeCommand() 
+			if 'yes' in snfm or 'sure' in snfm: 
+				strTime = datetime.datetime.now().strftime("% H:% M:% S") 
+				file.write(strTime) 
+				file.write(" :- ") 
+				file.write(note) 
+		    else: 
+				file.write(note) 
+		
+		elif "show note" in query: 
+			speak("Showing Notes") 
+			file = open("jarvis.txt", "r") 
+			print(file.read()) 
+			speak(file.read(6)) 
         
